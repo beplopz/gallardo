@@ -1,116 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>My Personal Web Profile</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 300px;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 6px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeleMedicine | Online Consultation</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="app-header">
+    <h1>TeleMedicine</h1>
+    <p>Online consultation platform for patients and doctors.</p>
+  </header>
 
-    <h1 style="color:darkblue;">Trixie Gallardo</h1>
-    <h2 style="color:gray;">BSIT Student</h2>
+  <main class="layout">
+    <section class="card guide" aria-labelledby="guide-title">
+      <h2 id="guide-title">Step-by-step guide</h2>
+      <ol id="guide-list" class="guide-list">
+        <li data-step="profile">Fill and save your patient profile.</li>
+        <li data-step="doctor">Review available doctors and choose one.</li>
+        <li data-step="appointment">Book your consultation schedule.</li>
+        <li data-step="chat">Send your first consultation message.</li>
+      </ol>
+      <p id="guide-status" class="status" aria-live="polite">Start with Step 1: save your profile.</p>
+    </section>
 
-    <p>
-        Hello! I am <strong>Trixie Gallardo</strong>, a passionate
-        <em>student</em> who loves technology and
-        <small>creative media</small>. I enjoy learning new skills and
-        improving myself through <ins>practice</ins> and <del>laziness</del>.
-    </p>
+    <section class="card" aria-labelledby="patient-form-title">
+      <h2 id="patient-form-title">1) Patient Profile</h2>
+      <form id="patient-form" class="stack">
+        <label>
+          Full Name
+          <input name="name" type="text" placeholder="e.g., Maria Santos" required />
+        </label>
+        <label>
+          Age
+          <input name="age" type="number" min="1" max="120" required />
+        </label>
+        <label>
+          Concern / Symptoms
+          <textarea name="symptoms" rows="3" placeholder="Describe your concern" required></textarea>
+        </label>
+        <button type="submit">Save Profile</button>
+      </form>
+      <p id="patient-status" class="status" aria-live="polite"></p>
+    </section>
 
-    <img src="c:\mydp.jpg" alt="My Profile Picture" width="200" style="border:2px solid black;">
+    <section class="card" aria-labelledby="doctor-list-title">
+      <h2 id="doctor-list-title">2) Available Doctors</h2>
+      <div id="doctor-list" class="doctor-grid"></div>
+    </section>
 
-    <p>
-        Visit:
-        <a href="https://www.w3schools.com" target="_blank">W3Schools Website</a>
-    </p>
+    <section class="card" aria-labelledby="appointment-title">
+      <h2 id="appointment-title">3) Book Consultation</h2>
+      <form id="appointment-form" class="stack">
+        <label>
+          Select Doctor
+          <select name="doctorId" id="doctor-select" required></select>
+        </label>
+        <label>
+          Date
+          <input name="date" type="date" required />
+        </label>
+        <label>
+          Time
+          <input name="time" type="time" required />
+        </label>
+        <button type="submit">Book Appointment</button>
+      </form>
+      <p id="appointment-status" class="status" aria-live="polite"></p>
+      <ul id="appointment-list" class="list"></ul>
+    </section>
 
-    <blockquote>
-        "Success is not final; failure is not fatal."
-        <cite> — Winston Churchill</cite>
-    </blockquote>
+    <section class="card" aria-labelledby="chat-title">
+      <h2 id="chat-title">4) Consultation Chat (Demo)</h2>
+      <div id="chat-log" class="chat-log" aria-live="polite"></div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" placeholder="Type a message..." required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-    <h2 style="color:blue;">My Hobbies</h2>
-    <ul>
-        <li>Editing Videos</li>
-        <li>Drawing</li>
-        <li>Playing Games</li>
-    </ul>
+  <footer class="app-footer">
+    <small>Academic project starter. Add real authentication, video calling, backend APIs, and secure medical data handling for production.</small>
+  </footer>
 
-    <h2 style="color:green;">My Short-Term Goals</h2>
-    <ol>
-        <li>Improve my coding skills</li>
-        <li>Finish school tasks on time</li>
-        <li>Learn more about HTML/CSS</li>
-    </ol>
-
-    <h2 style="color:purple;">Technical Terms</h2>
-    <dl>
-        <dt>HTML</dt>
-        <dd>The structure of a webpage.</dd>
-
-        <dt>CSS</dt>
-        <dd>Controls the style and layout of the webpage.</dd>
-
-        <dt>Algorithm</dt>
-        <dd>A step-by-step process to solve a problem.</dd>
-    </dl>
-
-    <h2 style="color:orange;">Information Table</h2>
-    <table>
-        <tr>
-            <th>Category</th>
-            <th>Details</th>
-        </tr>
-        <tr>
-            <td>Skills</td>
-            <td>Video Editing, HTML, Drawing</td>
-        </tr>
-        <tr>
-            <td>Software</td>
-            <td>CapCut, Photoshop, VS Code</td>
-        </tr>
-        <tr>
-            <td>Grade Level</td>
-            <td>College</td>
-        </tr>
-    </table>
-
-    <h2 style="color:rgb(0, 255, 21); font-size:22px;">Styled Text Example</h2>
-    <p style="background:lightyellow; padding:10px;">
-        This paragraph uses background color and padding.
-    </p>
-
-    <div style="background:#e6e6e6; padding:10px; margin-top:20px;">
-        This is a block element (DIV).
-    </div>
-
-    <p>
-        Here is an inline example:
-        <span style="color:red;">This is inline text.</span>
-    </p>
-
+  <script src="app.js"></script>
 </body>
-
 </html>
-www.w3schools.com

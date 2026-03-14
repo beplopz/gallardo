@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --primary: #0c6cc2;
+  --primary-dark: #084d8a;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #dbe3ee;
+  --ok: #0a7a34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app-header,
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.app-header p,
+.app-footer small {
+  color: var(--muted);
+}
+
+.layout {
+  width: min(1100px, 92vw);
+  margin: 0 auto 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.guide {
+  grid-column: 1 / -1;
+}
+
+.guide-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.guide-list li {
+  margin-bottom: 0.45rem;
+}
+
+.guide-list li.done {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.doctor-grid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.doctor {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+.doctor h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.doctor p {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.status {
+  min-height: 1.2rem;
+  color: var(--ok);
+  font-size: 0.9rem;
+}
+
+.chat-log {
+  height: 180px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem;
+  background: #fcfdff;
+  margin-bottom: 0.6rem;
+}
+
+.msg {
+  margin: 0 0 0.5rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.msg.user {
+  background: #e7f2ff;
+  margin-left: auto;
+}
+
+.msg.doctor {
+  background: #f2f4f7;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
