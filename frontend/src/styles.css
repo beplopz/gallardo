@@ -1,0 +1,62 @@
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f6fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: min(900px, 92vw);
+  margin: 1.5rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  color: #0a63b0;
+}
+
+header p {
+  margin-top: 0.4rem;
+  color: #6b7280;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.65rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  border-radius: 8px;
+  border: 1px solid #dbe3ee;
+  padding: 0.6rem;
+}
+
+button {
+  border: none;
+  background: #0a63b0;
+  color: white;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 1.2rem;
+  color: #0b7a38;
+}
