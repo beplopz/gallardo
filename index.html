@@ -3,87 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TeleMedicine | Online Consultation</title>
+  <title>Battery Life Test | Topic 15</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="app-header">
-    <h1>TeleMedicine</h1>
-    <p>Online consultation platform for patients and doctors.</p>
+  <header class="hero">
+    <nav class="nav" aria-label="Page navigation">
+      <a href="#overview">Overview</a>
+      <a href="#flowchart">Flowchart</a>
+      <a href="#schematic">Schematic</a>
+      <a href="#table">Table</a>
+    </nav>
+    <p class="eyebrow">Topic 15</p>
+    <h1>Battery Life Test</h1>
+    <p class="hero-copy">
+      Measure laptop battery life under different usage scenarios and compare the
+      results with desktop power consumption.
+    </p>
   </header>
 
-  <main class="layout">
-    <section class="card guide" aria-labelledby="guide-title">
-      <h2 id="guide-title">Step-by-step guide</h2>
-      <ol id="guide-list" class="guide-list">
-        <li data-step="profile">Fill and save your patient profile.</li>
-        <li data-step="doctor">Review available doctors and choose one.</li>
-        <li data-step="appointment">Book your consultation schedule.</li>
-        <li data-step="chat">Send your first consultation message.</li>
-      </ol>
-      <p id="guide-status" class="status" aria-live="polite">Start with Step 1: save your profile.</p>
+  <main>
+    <section id="overview" class="card overview-card">
+      <div>
+        <p class="eyebrow">Experiment Goal</p>
+        <h2>What this test compares</h2>
+        <p>
+          This project checks how long a fully charged laptop can operate during
+          common activities, then compares those results with how much power a
+          desktop computer uses for similar tasks.
+        </p>
+      </div>
+      <div class="quick-facts" aria-label="Quick facts">
+        <article>
+          <strong>Device 1</strong>
+          <span>Laptop battery duration</span>
+        </article>
+        <article>
+          <strong>Device 2</strong>
+          <span>Desktop wattage use</span>
+        </article>
+        <article>
+          <strong>Output</strong>
+          <span>Flowchart, schematic, and data table</span>
+        </article>
+      </div>
     </section>
 
-    <section class="card" aria-labelledby="patient-form-title">
-      <h2 id="patient-form-title">1) Patient Profile</h2>
-      <form id="patient-form" class="stack">
-        <label>
-          Full Name
-          <input name="name" type="text" placeholder="e.g., Maria Santos" required />
-        </label>
-        <label>
-          Age
-          <input name="age" type="number" min="1" max="120" required />
-        </label>
-        <label>
-          Concern / Symptoms
-          <textarea name="symptoms" rows="3" placeholder="Describe your concern" required></textarea>
-        </label>
-        <button type="submit">Save Profile</button>
-      </form>
-      <p id="patient-status" class="status" aria-live="polite"></p>
+    <section id="flowchart" class="card">
+      <p class="eyebrow">Part 1</p>
+      <h2>Flowchart: Battery Life Test Process</h2>
+      <div class="flowchart" aria-label="Battery life test flowchart">
+        <div class="flow-step start">Start</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Prepare laptop and desktop for testing</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Fully charge the laptop battery</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Set equal conditions: brightness, Wi‑Fi, volume, and apps</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Choose a usage scenario</div>
+        <div class="flow-branches">
+          <span>Browsing</span>
+          <span>Video</span>
+          <span>Meeting</span>
+          <span>Gaming</span>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Run test and record laptop battery percentage over time</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Run similar workload on desktop and measure watts</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">Compare, analyze, and make a conclusion</div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step end">End</div>
+      </div>
     </section>
 
-    <section class="card" aria-labelledby="doctor-list-title">
-      <h2 id="doctor-list-title">2) Available Doctors</h2>
-      <div id="doctor-list" class="doctor-grid"></div>
+    <section id="schematic" class="card">
+      <p class="eyebrow">Part 2</p>
+      <h2>Schematic Diagram: Testing Setup</h2>
+      <div class="schematic">
+        <div class="device laptop">
+          <div class="screen">Laptop<br /><small>100% Battery</small></div>
+          <div class="base"></div>
+        </div>
+        <div class="scenario-panel">
+          <h3>Usage Scenarios</h3>
+          <ul>
+            <li>Web browsing</li>
+            <li>Video playback</li>
+            <li>Online meeting</li>
+            <li>Gaming or multitasking</li>
+          </ul>
+        </div>
+        <div class="meter-card">
+          <span class="meter-label">Record</span>
+          <strong>Battery Life</strong>
+          <small>Time until low battery</small>
+        </div>
+
+        <div class="device desktop">
+          <div class="monitor">Desktop PC</div>
+          <div class="stand"></div>
+        </div>
+        <div class="meter-card wattmeter">
+          <span class="meter-label">Wattmeter</span>
+          <strong>Power Use</strong>
+          <small>Watts consumed</small>
+        </div>
+        <div class="meter-card compare">
+          <span class="meter-label">Final Step</span>
+          <strong>Compare Results</strong>
+          <small>Laptop duration vs. desktop electricity use</small>
+        </div>
+      </div>
     </section>
 
-    <section class="card" aria-labelledby="appointment-title">
-      <h2 id="appointment-title">3) Book Consultation</h2>
-      <form id="appointment-form" class="stack">
-        <label>
-          Select Doctor
-          <select name="doctorId" id="doctor-select" required></select>
-        </label>
-        <label>
-          Date
-          <input name="date" type="date" required />
-        </label>
-        <label>
-          Time
-          <input name="time" type="time" required />
-        </label>
-        <button type="submit">Book Appointment</button>
-      </form>
-      <p id="appointment-status" class="status" aria-live="polite"></p>
-      <ul id="appointment-list" class="list"></ul>
+    <section id="table" class="card">
+      <p class="eyebrow">Part 3</p>
+      <h2>Sample Data Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Usage Scenario</th>
+              <th>Laptop Start</th>
+              <th>Laptop End</th>
+              <th>Test Duration</th>
+              <th>Estimated Battery Life</th>
+              <th>Desktop Power</th>
+              <th>Observation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web Browsing</td>
+              <td>100%</td>
+              <td>20%</td>
+              <td>4 hrs</td>
+              <td>5 hrs</td>
+              <td>90 W</td>
+              <td>Light workload; best battery result.</td>
+            </tr>
+            <tr>
+              <td>Video Playback</td>
+              <td>100%</td>
+              <td>20%</td>
+              <td>3 hrs</td>
+              <td>3.75 hrs</td>
+              <td>120 W</td>
+              <td>Video uses more power than browsing.</td>
+            </tr>
+            <tr>
+              <td>Online Meeting</td>
+              <td>100%</td>
+              <td>20%</td>
+              <td>2.5 hrs</td>
+              <td>3.1 hrs</td>
+              <td>130 W</td>
+              <td>Camera and microphone increase usage.</td>
+            </tr>
+            <tr>
+              <td>Gaming</td>
+              <td>100%</td>
+              <td>20%</td>
+              <td>1.5 hrs</td>
+              <td>1.9 hrs</td>
+              <td>250 W</td>
+              <td>Most demanding activity.</td>
+            </tr>
+            <tr>
+              <td>Multitasking</td>
+              <td>100%</td>
+              <td>20%</td>
+              <td>2 hrs</td>
+              <td>2.5 hrs</td>
+              <td>160 W</td>
+              <td>Several apps drain battery faster.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section class="card" aria-labelledby="chat-title">
-      <h2 id="chat-title">4) Consultation Chat (Demo)</h2>
-      <div id="chat-log" class="chat-log" aria-live="polite"></div>
-      <form id="chat-form" class="chat-form">
-        <input id="chat-input" type="text" placeholder="Type a message..." required />
-        <button type="submit">Send</button>
-      </form>
+    <section class="card conclusion">
+      <p class="eyebrow">Conclusion</p>
+      <h2>Key Finding</h2>
+      <p>
+        Laptops last longer during light tasks like browsing, while heavy tasks
+        such as gaming drain the battery quickly. Desktops do not rely on a
+        battery, but they usually consume more electricity, especially during
+        demanding workloads.
+      </p>
     </section>
   </main>
 
-  <footer class="app-footer">
-    <small>Academic project starter. Add real authentication, video calling, backend APIs, and secure medical data handling for production.</small>
+  <footer>
+    <p>Battery Life Test Website • Academic Presentation</p>
   </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>
